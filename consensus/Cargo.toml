@@ -64,6 +64,9 @@ mocks = [
 	"commonware-p2p/mocks",
 	"commonware-resolver/mocks",
 ]
+mayo = [
+	"commonware-cryptography/mayo",
+]
 arbitrary = [
 	"commonware-codec/arbitrary",
 	"commonware-coding/arbitrary",
