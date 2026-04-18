@@ -32,10 +32,12 @@ ed25519-consensus = { workspace = true, default-features = false }
 num-rational = { workspace = true, optional = true }
 num-traits = { workspace = true, optional = true }
 p256 = { workspace = true, features = ["ecdsa"] }
+pq-mayo = { workspace = true, optional = true }
 rand.workspace = true
 rand_chacha.workspace = true
 rand_core.workspace = true
 sha2.workspace = true
+signature = { workspace = true, optional = true }
 thiserror.workspace = true
 x25519-dalek = { workspace = true, features = ["zeroize"] }
 zeroize = { workspace = true, features = ["zeroize_derive"] }
@@ -73,6 +75,11 @@ default = [ "std" ]
 blake3-parallel = [ "blake3/rayon", "std" ]
 sha2-asm = [ "sha2/asm" ]
 mocks = [ "std" ]
+mayo = [
+	"dep:pq-mayo",
+	"dep:signature",
+	"std",
+]
 arbitrary = [
 	"commonware-codec/arbitrary",
 	"commonware-math/arbitrary",

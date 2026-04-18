@@ -45,6 +45,9 @@ commonware_macros::stability_scope!(ALPHA {
     pub mod lthash;
     pub use crate::lthash::LtHash;
 });
+commonware_macros::stability_scope!(ALPHA, cfg(feature = "mayo") {
+    pub mod mayo;
+});
 commonware_macros::stability_scope!(BETA {
     use commonware_codec::{Encode, ReadExt};
     use commonware_math::algebra::Random;
